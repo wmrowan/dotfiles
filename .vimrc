@@ -1,4 +1,5 @@
 set nocompatible
+filetype off
 
 " Setup vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -6,12 +7,15 @@ call vundle#rc()
 
 " All vundle bundles
 Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/powerline'
+Bundle 'fatih/vim-go'
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'scrooloose/syntastic'
+"Bundle 'airblade/vim-gitgutter'
+"Bundle 'kien/ctrlp.vim'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'Lokaltog/powerline'
+"Bundle 'fidian/hexmode'
+"Bundle 'kchmck/vim-coffee-script'
 
 " Necessary for color to work in powerline
 set term=xterm-256color
@@ -28,8 +32,8 @@ set ttymouse=xterm2
 
 " Replaces tabs with spaces
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 
@@ -53,14 +57,16 @@ set laststatus=2
 " copying and pasting to and from vim again.
 set clipboard=unnamedplus
 
+syntax enable
+
 " It took me a while to find this feature.
 " This updates settings based on the detected
 " filetype on open. There seem to be plenty
 " of helpful behaviors defined by default.
-filetype plugin on
+filetype plugin indent on
 
 " Use powerline as our status line
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " Allows you to scroll while keeping the cursor
 " in the same relative screen location. I can't

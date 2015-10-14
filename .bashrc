@@ -81,3 +81,25 @@ export PATH=$PATH:~/.ccollab-cmdline
 # This is necessary to get tmux to display colors correctly for
 # some applications.
 export TERM=screen-256color
+
+# Ruby environment manager
+export PATH=$PATH:~/.rbenv/bin
+eval "$(rbenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/wmrowan/google-cloud-sdk/path.bash.inc'
+
+# The next line enables bash completion for gcloud.
+source '/home/wmrowan/google-cloud-sdk/completion.bash.inc'
+
+export PATH=$PATH:~/.scala-2.11.6/bin
+
+# For heap
+export PGHOST=localhost
+export PGUSER=heap
+export SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export NODE_ENV=dev
+
+# For Go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/code/gopath
